@@ -96,7 +96,7 @@ class bitbucket::install(
       archive { "/tmp/${file}":
         ensure          => present,
         extract         => true,
-        extract_path    => $installdir,
+        extract_path    => $webappdir,
         source          => "${download_url}/${file}",
         creates         => $archive_dir,
         cleanup         => true,
